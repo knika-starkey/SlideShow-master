@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrap {
+        height: 350px;
+        overflow: hidden;
+        width: 1250px;
+      }
+      .slider {
+        position: relative;
+        left: 0;
+        height: 350px;
+        transition: all 0.5s;
+      }
+      .size {
+        height: 0;
+      }
+      .fade {
+        opacity: 0;
+      }
+      .go {
+        left: 1250px;
+      }
+      .mini {
+        height: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <img src="./images/f1.jpg" alt="" id="slider" class="slider" />
+    </div>
+    <img src="./images/f1.jpg" class="mini" />
+    <img src="./images/f2.jpg" class="mini" />
+    <img src="./images/f3.jpg" class="mini" />
+    <img src="./images/f4.jpg" class="mini" />
+    <img src="./images/f5.jpg" class="mini" />
+    <img src="./images/f6.jpg" class="mini" />
+    <img src="./images/f7.jpg" class="mini" />
+    <img src="./images/f8.jpg" class="mini" />
+    <img src="./images/f9.jpg" class="mini" />
+    <img src="./images/f10.jpg" class="mini" />
+    <img src="./images/f11.jpg" class="mini" />
+    <img src="./images/f12.jpg" class="mini" />
+    <button onclick="back()">&lt;</button>
+    <button onclick="stop()">&#8214;</button>
+    <button onclick="start()">&#9658;</button>
+    <button onclick="next()">&gt;</button>
+    <form action="" name="effects">
+      <input type="radio" name="effect" value="go" />go<br />
+      <input type="radio" name="effect" value="size" />size<br />
+      <input type="radio" name="effect" value="fade" />fade<br />
+      <br />
+      <input type="button" onclick="getEffect()" value="Get effect" />
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
